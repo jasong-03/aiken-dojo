@@ -1,0 +1,5 @@
+{
+  "name": "Aiken Dojo",
+  "description": "A browser-based IDE for Cardano smart contract development using the Aiken language. Zero setup, instant feedback.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aiken Dojo - Zero-Setup Cardano IDE</title>
+    <meta name="description" content="Browser-based IDE for Cardano smart contracts using Aiken." />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Patrick+Hand&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              hand: ['Patrick Hand', 'cursive'],
+            },
+            colors: {
+              'dojo-bg': '#f9fafb',
+              'dojo-accent-pink': '#FFD1DC',
+              'dojo-accent-blue': '#BFDBFE',
+              'dojo-accent-green': '#C1E1C1',
+              'dojo-accent-yellow': '#FEF3C7',
+              'dojo-dark': '#1F2937',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #f9fafb;
+        background-image: radial-gradient(#d1d5db 1px, transparent 1px);
+        background-size: 24px 24px;
+      }
+      .marker-highlight {
+        position: relative;
+        z-index: 0;
+        white-space: nowrap;
+      }
+      .marker-highlight::before {
+        content: '';
+        position: absolute;
+        left: -4px;
+        right: -4px;
+        bottom: 2px;
+        height: 40%;
+        background-color: #FFD1DC;
+        z-index: -1;
+        transform: rotate(-1deg);
+        border-radius: 4px;
+      }
+      .marker-highlight-blue::before {
+        background-color: #BFDBFE;
+        transform: rotate(1deg);
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
